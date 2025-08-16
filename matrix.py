@@ -165,7 +165,7 @@ class NMatrix:
         for i in range(1, self.outer_dim() + 1):
             for j in range(1, self.outer_dim() + 1):
                 l.append(self.hmp[(j, i)])
-        R = NMatrix(self.outer_dim, self.inner_dim, l)
+        R = NMatrix(self.outer_dim(), self.inner_dim(), l)
         return R
 
     def transform(self) -> DMatrix:
